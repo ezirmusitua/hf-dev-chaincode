@@ -1,0 +1,1 @@
+/home/jz/.dotfiles/SpaceVim/SpaceVimGo.d
