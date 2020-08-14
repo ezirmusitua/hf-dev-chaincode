@@ -3,8 +3,9 @@
 . stopNetwork.sh
 
 export FABRIC_CFG_PATH=$PWD/sampleconfig
-sed -i 's/\/var/\/tmp/g' sampleconfig/core.yaml
-sed -i 's/\/var/\/tmp/g' sampleconfig/orderer.yaml
+sed -i 's/\/var\/hyperledger/\/tmp/g' sampleconfig/core.yaml
+sed -i 's/\/var\/hyperledger/\/tmp/g' sampleconfig/orderer.yaml
+sed -i 's/-ccenv:latest/-ccenv:1.4.4/g' sampleconfig/orderer.yaml
 export ORDERER_GENERAL_GENESISPROFILE=SampleDevModeSolo
 export CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052 
 nohup ./bin/hfDevOrderer &
